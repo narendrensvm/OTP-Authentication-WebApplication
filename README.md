@@ -102,7 +102,7 @@ How to Run This Application Locally
 
 ### Step 1: Clone the Repository
 
-git clone <github-repo-url> <br> 
+git clone https://github.com/narendrensvm/OTP-Authentication-WebApplication.git <br> 
 cd otp-auth-app
 
 ### Step 2: Run the Backend Server
