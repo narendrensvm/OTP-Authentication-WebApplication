@@ -82,7 +82,7 @@ Validates the OTP, tracks failed attempts, blocks the user if required, and retu
 
 **Headers**
 
-Authorization: Authorization: <session_token>
+Authorization: <session_token>
 
 Returns basic user information if the token is valid.
 
