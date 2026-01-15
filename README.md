@@ -64,7 +64,7 @@ Backend API Endpoints
 
 **Request Body**
 
-{"identifier": "user@example.com"}
+{<br>"identifier": "user@example.com"<br>}
 
 Generates a 6-digit OTP and prints it in the backend terminal.
 
@@ -74,7 +74,7 @@ Generates a 6-digit OTP and prints it in the backend terminal.
 
 **Request Body**
 
-{"identifier": "user@example.com","otp": "123456"}
+{<br>"identifier": "user@example.com",<br>"otp": "123456"<br>}
 
 Validates the OTP, tracks failed attempts, blocks the user if required, and returns a session token on success.
 
@@ -102,11 +102,14 @@ How to Run This Application Locally
 
 ### Step 1: Clone the Repository
 
-git clone cd otp-auth-app
+git clone <github-repo-url> <br> 
+cd otp-auth-app
 
 ### Step 2: Run the Backend Server
 
-cd backendnpm installnode server.js
+cd backend<br>
+npm install<br>
+node server.js
 
 If the backend starts successfully, you will see:
 
@@ -118,7 +121,9 @@ OTP will be displayed in this terminal when generated.
 
 Open a new terminal window and run:
 
-cd frontendnpm installnpm start
+cd frontend<br>
+npm install<br>
+npm start
 
 Frontend will start at:[http://localhost:3000](http://localhost:3000)
 
