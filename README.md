@@ -1,53 +1,58 @@
-# OTP-Authentication-WebApplication
+# OTP-Based Authentication Web Application
 
-This project is a minimal full-stack web application that demonstrates OTP-based authentication using a simple client–server architecture.
+## Overview
 
-The goal of this project is not to build a production-ready authentication system, but to clearly showcase:
-Logical thinking
-Backend and frontend integration
-Handling edge cases like OTP retries and blocking
-Clean and readable code
-This project was built as part of a Fullstack Developer interview challenge.
+This project is a simple full-stack web application that demonstrates OTP-based authentication using a minimal and clean implementation.
 
-**Features:**
-Login using email or phone number
-OTP generation and validation
-OTP expiry handling
-Maximum 3 OTP verification attempts
-Automatic blocking for 10 minutes after 3 failed attempts
-Session token generation after successful verification
-Token persistence using localStorage
-Simple protected “Welcome” page
+The purpose of this project is to showcase logical problem-solving, backend and frontend integration, and handling of real-world edge cases such as OTP retries and temporary user blocking. The focus is kept on clarity and functionality rather than heavy frameworks or abstractions.
 
-OTP delivery is mocked using backend console logs to keep the project dependency-free.
+This application was developed as part of a Fullstack Developer interview challenge.
 
-**Tech Stack
-Frontend**
-React.js
-React Router DOM
-Fetch API
-LocalStorage (for token persistence)
+---
 
-**Backend**
-Node.js
-Express.js
-UUID (for mock session tokens)
-CORS
+## Features
 
-**OTP & Authentication Logic
-OTP Generation**
-A random 6-digit numeric OTP is generated
-OTP expiry time: 2 minutes
-OTP Validation Rules
-Maximum 3 incorrect attempts
-After 3 failures:
-  Identifier (email/phone) is blocked for 10 minutes
-  OTP is invalidated
-Blocked users are restricted at the login page itself
+- Login using email or phone number
+- One-Time Password (OTP) based authentication
+- OTP expiry handling
+- Maximum 3 OTP verification attempts
+- Automatic blocking for 10 minutes after 3 failed attempts
+- Session token generation on successful verification
+- Token persistence using localStorage
+- Protected Welcome page after login
 
-**Session Handling**
-On successful OTP verification:
-  A mock session token (UUID) is generated
-  Token is stored in frontend localStorage
-Token is validated via /auth/me API
+OTP delivery is mocked and printed in the backend console for simplicity.
+
+---
+
+## Tech Stack Used
+
+### Frontend
+- React.js
+- React Router DOM
+- Fetch API
+- LocalStorage for session handling
+
+### Backend
+- Node.js
+- Express.js
+- UUID (for generating session tokens)
+- CORS
+
+### Other
+- No database (in-memory storage)
+- No third-party OTP or authentication services
+
+---
+
+## OTP & Authentication Logic
+
+- OTP is a randomly generated 6-digit number
+- OTP validity duration is 2 minutes
+- Users are allowed a maximum of 3 incorrect OTP attempts
+- After 3 failed attempts, the email or phone number is blocked for 10 minutes
+- Blocked users are restricted at the login page itself
+- On successful OTP verification, a mock session token is generated
+
+---
 
