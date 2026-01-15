@@ -6,8 +6,6 @@ This project is a simple full-stack web application that demonstrates OTP-based 
 
 The purpose of this project is to showcase logical problem-solving, backend and frontend integration, and handling of real-world edge cases such as OTP retries and temporary user blocking. The focus is kept on clarity and functionality rather than heavy frameworks or abstractions.
 
-This application was developed as part of a Fullstack Developer interview challenge.
-
 ---
 
 ## Features
